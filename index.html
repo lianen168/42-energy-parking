@@ -3,1043 +3,418 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>42.energy | The Ultimate Answer to Energy & Currency</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- SEO: Title Tag -->
+    <title>42.energy | The Ultimate Answer to the Energy Question in the AI Era</title>
+    
+    <!-- SEO: Meta Description -->
+    <meta name="description" content="Discover 42.energy, the premium domain representing the ultimate answer to the energy challenges of AI and exascale computing. A brand for the next paradigm in energy.">
+    
+    <!-- SEO: Keywords (less emphasis by Google now, but can be useful) -->
+    <meta name="keywords" content="42, energy, AI, AGI, domain, ultimate answer, exascale, energy currency, sci-fi, premium domain, 42.energy">
+
+    <!-- Social Media/Open Graph Tags -->
+    <meta property="og:title" content="42.energy | The Ultimate Answer to Energy">
+    <meta property="og:description" content="A premium domain asset for the company solving the ultimate energy questions of the AI era.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://42.energy">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- SEO: JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "42.energy | The Ultimate Answer to the Energy Question",
+      "description": "A landing page for the premium domain asset 42.energy, exploring its value in the context of AI, sci-fi culture, and the future of energy.",
+      "url": "https://42.energy",
+      "mainEntity": {
+        "@type": "Product",
+        "name": "The domain name 42.energy",
+        "description": "A premium domain for a venture tackling the ultimate energy challenges. The brand '42.energy' signifies 'the ultimate answer to the energy question'.",
+        "sku": "42.energy",
+        "offers": {
+          "@type": "Offer",
+          "price": "4200.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://www.spaceship.com/s/buy/42.energy/LXDS34IrbPapmVxI"
+        }
+      }
+    }
+    </script>
+    
     <style>
         :root {
-            --quantum-blue: #00d4ff;
-            --ai-silver: #e0e0e0;
-            --energy-gold: #ffd700;
-            --dark-future: #0a0a0f;
-            --matrix-green: #00ff9d;
-            --singularity-purple: #9d4edd;
-            --data-stream: #1a1a2e;
+            --bg-dark: #02040a;
+            --bg-darker: #000000;
+            --text-primary: #e6f1ff;
+            --text-secondary: #8899a9;
+            --accent-blue: #00e0ff;
+            --accent-purple: #ae5aff;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --card-bg: rgba(255, 255, 255, 0.03);
         }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
         body {
-            background: 
-                linear-gradient(135deg, #000000 0%, var(--data-stream) 100%),
-                radial-gradient(circle at 20% 30%, rgba(0, 212, 255, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
-            color: var(--ai-silver);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            overflow-x: hidden;
-            position: relative;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
             font-family: 'Inter', sans-serif;
-        }
-        
-        /* 量子计算网格背景 */
-        .quantum-grid {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
-            background-size: 60px 60px;
-            z-index: -3;
-            opacity: 0.3;
-        }
-        
-        /* AI神经网络流 */
-        .neural-network {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -2;
-            overflow: hidden;
-        }
-        
-        .neuron {
-            position: absolute;
-            width: 6px;
-            height: 6px;
-            background: var(--matrix-green);
-            border-radius: 50%;
-            box-shadow: 0 0 10px var(--matrix-green);
-            animation: neuronPulse 3s ease-in-out infinite;
-        }
-        
-        .axon {
-            position: absolute;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--quantum-blue), transparent);
-            transform-origin: left center;
-            opacity: 0.1;
-        }
-        
-        @keyframes neuronPulse {
-            0%, 100% { transform: scale(1); opacity: 0.4; }
-            50% { transform: scale(1.3); opacity: 0.8; }
-        }
-        
-        @keyframes quantumEntanglement {
-            0% { transform: translateX(-100%) translateY(-100%); }
-            100% { transform: translateX(100%) translateY(100%); }
-        }
-        
-        /* 主要动画效果 */
-        @keyframes answerGlow {
-            0%, 100% { 
-                text-shadow: 
-                    0 0 15px var(--quantum-blue),
-                    0 0 30px var(--quantum-blue),
-                    0 0 45px rgba(0, 212, 255, 0.5);
-            }
-            50% { 
-                text-shadow: 
-                    0 0 20px var(--energy-gold),
-                    0 0 40px var(--energy-gold),
-                    0 0 60px rgba(255, 215, 0, 0.6);
-            }
-        }
-        
-        @keyframes singularitySpin {
-            0% { transform: rotate(0deg) scale(1); }
-            100% { transform: rotate(360deg) scale(1); }
-        }
-        
-        @keyframes dataWave {
-            0% { background-position: 0% 0%; }
-            100% { background-position: 200% 200%; }
-        }
-        
-        @keyframes aiCompute {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 0.6; }
-        }
-
-        header {
-            padding: 5rem 2rem 3rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .singularity-center {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(157, 78, 221, 0.1) 0%, transparent 70%);
-            animation: aiCompute 4s ease-in-out infinite;
-            z-index: -1;
-        }
-        
-        .domain-display {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 3rem;
-        }
-        
-        .domain-main {
-            font-size: 6.5rem;
-            font-weight: 900;
-            color: transparent;
-            background: linear-gradient(45deg, var(--quantum-blue), var(--matrix-green), var(--energy-gold));
-            background-clip: text;
-            -webkit-background-clip: text;
-            background-size: 200% 200%;
-            animation: answerGlow 4s ease-in-out infinite, dataWave 10s linear infinite;
-            font-family: 'JetBrains Mono', monospace;
-            letter-spacing: 0;
-            position: relative;
-            filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.3));
-        }
-        
-        .domain-main::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80%;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--quantum-blue), var(--energy-gold), transparent);
-        }
-        
-        .domain-badge {
-            position: absolute;
-            top: -25px;
-            right: -35px;
-            background: linear-gradient(45deg, var(--singularity-purple), var(--quantum-blue));
-            color: var(--dark-future);
-            padding: 0.5rem 1.5rem;
-            border-radius: 20px;
-            font-size: 1.3rem;
-            font-weight: 800;
-            transform: rotate(15deg);
-            box-shadow: 0 5px 20px rgba(157, 78, 221, 0.4);
-            font-family: 'JetBrains Mono', monospace;
-            letter-spacing: 1px;
-        }
-        
-        .domain-tagline {
-            font-size: 2rem;
-            color: var(--matrix-green);
-            background: rgba(0, 255, 157, 0.1);
-            padding: 1rem 2.5rem;
-            border-radius: 30px;
-            display: inline-block;
-            margin: 1.5rem 0;
-            border: 2px solid rgba(0, 255, 157, 0.3);
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: 600;
-            letter-spacing: 1px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .domain-tagline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 255, 157, 0.2), transparent);
-            animation: quantumEntanglement 3s linear infinite;
-        }
-        
-        .tagline {
-            font-size: 1.6rem;
-            color: #b0e0ff;
-            max-width: 900px;
-            margin: 1rem auto;
             line-height: 1.6;
-            font-weight: 300;
+            overflow-x: hidden;
+            min-height: 100vh;
         }
         
-        .answer-stats {
-            display: flex;
-            justify-content: center;
-            gap: 2.5rem;
-            margin-top: 2.5rem;
-            flex-wrap: wrap;
-        }
-        
-        .answer-stat {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 1.5rem 2rem;
-            border-radius: 16px;
-            border: 1px solid rgba(0, 212, 255, 0.2);
-            text-align: center;
-            backdrop-filter: blur(10px);
-            transition: all 0.4s;
-            min-width: 180px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .answer-stat:hover {
-            transform: translateY(-8px) scale(1.05);
-            border-color: var(--matrix-green);
-            box-shadow: 0 10px 25px rgba(0, 255, 157, 0.2);
-        }
-        
-        .answer-stat::before {
-            content: '';
-            position: absolute;
+        /* Particle Background */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
             top: 0;
             left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--quantum-blue), var(--matrix-green));
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: var(--energy-gold);
-            font-family: 'JetBrains Mono', monospace;
-            margin-bottom: 0.5rem;
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            color: #8ac7ff;
-            letter-spacing: 1px;
+            z-index: -1;
+            background-color: var(--bg-darker);
         }
 
-        main {
-            flex: 1;
-            max-width: 1300px;
-            margin: 3rem auto;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+        /* Keyframes for dynamic text effect */
+        @keyframes glow {
+          0%, 100% {
+            text-shadow: 0 0 5px var(--accent-blue), 0 0 10px var(--accent-blue), 0 0 20px var(--accent-purple), 0 0 30px var(--accent-purple);
+            opacity: 0.9;
+          }
+          50% {
+            text-shadow: 0 0 10px var(--accent-blue), 0 0 20px var(--accent-blue), 0 0 30px var(--accent-purple), 0 0 40px var(--accent-purple);
+            opacity: 1;
+          }
         }
-        
-        .concept-box, .future-box, .acquisition-box {
-            background: rgba(16, 16, 24, 0.85);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(0, 212, 255, 0.2);
-            border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: 
-                0 20px 40px rgba(0, 0, 0, 0.6),
-                inset 0 0 50px rgba(0, 212, 255, 0.05);
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s;
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 2rem 4rem;
         }
-        
-        .acquisition-box {
-            grid-column: 1 / -1;
-            background: rgba(16, 16, 24, 0.9);
-            border: 2px solid var(--energy-gold);
-            animation: answerGlow 6s ease-in-out infinite;
+        header {
+            text-align: center;
+            margin-bottom: 6rem;
         }
-        
-        .concept-box:hover, .future-box:hover {
-            transform: translateY(-5px);
-            border-color: var(--matrix-green);
-            box-shadow: 
-                0 25px 50px rgba(0, 212, 255, 0.15),
-                inset 0 0 60px rgba(0, 212, 255, 0.1);
-        }
-        
-        .concept-box::before, .future-box::before, .acquisition-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(90deg, var(--quantum-blue), var(--matrix-green), var(--singularity-purple));
-            background-size: 200% 100%;
-            animation: dataWave 2s linear infinite;
-        }
-        
-        h2 {
-            font-size: 2.3rem;
-            color: var(--quantum-blue);
+        .logo {
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: clamp(3rem, 10vw, 7rem);
+            line-height: 1.1;
             margin-bottom: 1.5rem;
-            font-family: 'JetBrains Mono', monospace;
-            display: flex;
-            align-items: center;
-            gap: 15px;
+            letter-spacing: -0.05em;
         }
-        
-        h3 {
-            font-size: 1.7rem;
-            color: var(--matrix-green);
-            margin: 2rem 0 1rem;
-            font-family: 'JetBrains Mono', monospace;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid rgba(0, 255, 157, 0.3);
+        /* Applying the dynamic glow animation */
+        .dynamic-42, .dynamic-energy {
+            display: inline-block; /* Needed for animation */
         }
-        
-        .musk-quote {
-            background: rgba(255, 215, 0, 0.05);
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-            border-left: 4px solid var(--energy-gold);
-            position: relative;
-            overflow: hidden;
+        .dynamic-42 {
+            background: linear-gradient(135deg, var(--text-primary), #d0eaff);
+             -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+            animation: glow 4s ease-in-out infinite;
         }
-        
-        .musk-quote::before {
-            content: '"';
-            position: absolute;
-            top: -15px;
-            left: 20px;
-            font-size: 4rem;
-            color: rgba(255, 215, 0, 0.2);
-            font-family: serif;
+        .dynamic-energy {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+             -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+            animation: glow 3s ease-in-out infinite reverse;
         }
-        
-        .quote-attribution {
-            text-align: right;
-            color: var(--energy-gold);
-            font-weight: 600;
+
+        .tagline {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            color: var(--text-secondary);
+            font-weight: 300;
             margin-top: 1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .thesis {
+            max-width: 800px;
+            margin: 0 auto 5rem;
+            text-align: center;
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
             font-style: italic;
         }
-        
-        .future-list {
-            list-style: none;
-            margin: 1.5rem 0;
+        .thesis-highlight {
+            color: var(--accent-blue);
+            font-weight: 600;
+            font-style: normal;
         }
-        
-        .future-list li {
-            padding: 1rem;
-            margin-bottom: 0.8rem;
-            background: rgba(0, 212, 255, 0.05);
-            border-radius: 10px;
-            border-left: 3px solid var(--quantum-blue);
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            transition: all 0.3s;
-        }
-        
-        .future-list li:hover {
-            background: rgba(0, 212, 255, 0.1);
-            transform: translateX(5px);
-            border-left-color: var(--matrix-green);
-        }
-        
-        .future-list i {
-            color: var(--quantum-blue);
-            font-size: 1.2rem;
-        }
-        
-        /* 终极答案网格 */
-        .answer-grid {
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 6rem;
         }
-        
-        .answer-card {
-            background: linear-gradient(145deg, rgba(25, 25, 35, 0.9), rgba(40, 40, 50, 0.9));
-            border-radius: 15px;
-            padding: 1.8rem;
-            border: 1px solid rgba(0, 212, 255, 0.2);
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-            text-align: center;
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
         }
-        
-        .answer-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            border-color: var(--matrix-green);
-            box-shadow: 0 15px 30px rgba(0, 255, 157, 0.2);
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 10px 30px rgba(0, 224, 255, 0.1);
         }
-        
-        .answer-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(90deg, var(--quantum-blue), var(--matrix-green));
-        }
-        
-        .card-icon {
-            font-size: 2.5rem;
-            color: var(--quantum-blue);
-            margin-bottom: 1rem;
-            filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.5));
-        }
-        
         .card-title {
+            font-family: 'Space Mono', monospace;
             font-size: 1.3rem;
             font-weight: 700;
-            color: var(--ai-silver);
-            margin-bottom: 0.8rem;
-            font-family: 'JetBrains Mono', monospace;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
         }
-        
         .card-desc {
             font-size: 0.95rem;
-            color: #a0d8ff;
-            line-height: 1.5;
+            color: var(--text-secondary);
+            line-height: 1.7;
         }
-        
-        /* 价格与价值 */
-        .ultimate-value {
+        .cta {
+            max-width: 700px;
+            margin: 0 auto 5rem;
             text-align: center;
-            margin: 2rem 0;
-        }
-        
-        .price-display {
-            font-size: 5rem;
-            font-weight: 900;
-            color: var(--ai-silver);
-            margin: 1.5rem 0;
-            font-family: 'JetBrains Mono', monospace;
+            padding: 4rem;
+            background: linear-gradient(145deg, var(--bg-darker), #04060c);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
             position: relative;
+            overflow: hidden;
         }
-        
-        .price-display::before {
-            content: 'ULTIMATE ANSWER';
-            position: absolute;
-            top: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 1.1rem;
-            color: var(--matrix-green);
-            letter-spacing: 3px;
-            font-weight: 600;
-            font-family: 'JetBrains Mono', monospace;
+        .cta-content { position: relative; z-index: 1; }
+        .price {
+            font-family: 'Space Mono', monospace;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin: 1.5rem 0 0.5rem;
+            color: var(--text-primary);
         }
-        
-        .price-amount {
-            background: linear-gradient(45deg, var(--energy-gold), var(--matrix-green));
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            text-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+        .price-sub {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 2.5rem;
         }
-        
-        .payment-plan {
-            font-size: 1.8rem;
-            color: var(--matrix-green);
-            margin: 1.5rem 0;
-            font-weight: 600;
-        }
-        
-        .payment-breakdown {
+        .btn-container {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            margin: 2.5rem 0;
+            gap: 1rem;
             flex-wrap: wrap;
         }
-        
-        .payment-phase {
-            background: rgba(0, 255, 157, 0.05);
-            padding: 1.5rem 2rem;
-            border-radius: 12px;
-            min-width: 220px;
-            border: 2px solid rgba(0, 255, 157, 0.2);
-            transition: all 0.3s;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .payment-phase:hover {
-            transform: translateY(-5px);
-            border-color: var(--matrix-green);
-            background: rgba(0, 255, 157, 0.1);
-        }
-        
-        .phase-number {
-            font-size: 1.2rem;
-            color: #8ac7ff;
-            margin-bottom: 0.5rem;
-            font-family: 'JetBrains Mono', monospace;
-        }
-        
-        .phase-amount {
-            font-size: 2rem;
-            color: var(--matrix-green);
-            font-weight: 800;
-            font-family: 'JetBrains Mono', monospace;
-        }
-        
-        /* Spaceship交易框 */
-        .spaceship-box {
-            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 215, 0, 0.1));
-            border-radius: 15px;
-            padding: 2rem;
-            margin: 2rem 0;
-            border: 2px solid var(--singularity-purple);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .spaceship-box::before {
-            content: '🚀';
-            position: absolute;
-            top: -20px;
-            right: 20px;
-            font-size: 3rem;
-            opacity: 0.2;
-            animation: singularitySpin 10s linear infinite;
-        }
-        
-        .spaceship-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 1.5rem;
-        }
-        
-        .spaceship-header i {
-            color: var(--singularity-purple);
-            font-size: 2rem;
-        }
-        
-        .spaceship-title {
-            font-size: 1.8rem;
-            color: var(--ai-silver);
-            font-weight: 700;
-        }
-        
-        .spaceship-link {
-            display: block;
-            background: rgba(0, 0, 0, 0.3);
-            padding: 1.2rem;
-            border-radius: 10px;
-            margin: 1.5rem 0;
-            border-left: 4px solid var(--quantum-blue);
-            font-family: 'JetBrains Mono', monospace;
-            word-break: break-all;
-            transition: all 0.3s;
-        }
-        
-        .spaceship-link:hover {
-            background: rgba(0, 0, 0, 0.5);
-            transform: translateX(5px);
-            border-left-color: var(--matrix-green);
-        }
-        
-        .spaceship-link a {
-            color: var(--quantum-blue);
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
-        
-        .spaceship-link a:hover {
-            text-decoration: underline;
-            color: var(--matrix-green);
-        }
-        
-        .contact-info {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 1.5rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-            border-left: 4px solid var(--energy-gold);
-        }
-        
-        .contact-info a {
-            color: var(--quantum-blue);
-            font-weight: bold;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-family: 'JetBrains Mono', monospace;
-        }
-        
-        .contact-info a:hover {
-            text-decoration: underline;
-            color: var(--matrix-green);
-        }
-        
-        .cta-button {
+        .btn {
             display: inline-block;
-            padding: 1.3rem 3rem;
-            background: linear-gradient(45deg, var(--singularity-purple), var(--quantum-blue));
-            color: var(--dark-future);
-            text-decoration: none;
-            font-size: 1.3rem;
+            color: #000;
+            font-family: 'Inter', sans-serif;
             font-weight: 700;
-            border-radius: 10px;
-            margin: 1rem 0.5rem;
-            transition: all 0.3s;
+            font-size: 1rem;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 8px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
             border: none;
             cursor: pointer;
-            font-family: 'JetBrains Mono', monospace;
-            letter-spacing: 1px;
-            position: relative;
-            overflow: hidden;
         }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4);
-            background: linear-gradient(45deg, var(--quantum-blue), var(--singularity-purple));
+        .btn.primary {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
         }
-        
-        .button-group {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin: 2rem 0;
+        .btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 224, 255, 0.3);
         }
-        
-        .trust-badges {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2.5rem;
-            flex-wrap: wrap;
+        .btn.secondary {
+             background: transparent;
+             border: 2px solid var(--accent-blue);
+             color: var(--accent-blue);
         }
-        
-        .badge {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #8ac7ff;
-            padding: 0.8rem 1.5rem;
-            background: rgba(0, 212, 255, 0.1);
-            border-radius: 30px;
-            border: 1px solid rgba(0, 212, 255, 0.3);
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.9rem;
+        .btn.secondary:hover {
+            background: rgba(0, 224, 255, 0.1);
+            transform: translateY(-2px);
         }
-        
-        .badge i {
-            color: var(--matrix-green);
-        }
-        
         footer {
             text-align: center;
-            padding: 2.5rem;
-            color: #60a8ff;
-            font-size: 0.9rem;
-            border-top: 1px solid rgba(0, 212, 255, 0.1);
-            margin-top: 3rem;
-            background: rgba(8, 8, 12, 0.8);
+            padding: 2rem;
+            color: #555;
+            font-size: 0.8rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
-        
-        .footer-links a {
-            color: var(--quantum-blue);
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: 600;
-            font-family: 'JetBrains Mono', monospace;
-        }
-        
-        .footer-links a:hover {
-            color: var(--matrix-green);
-            text-decoration: underline;
-        }
-        
-        @media (max-width: 1100px) {
-            main { grid-template-columns: 1fr; }
-            .answer-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        
         @media (max-width: 768px) {
-            .domain-main { font-size: 4.5rem; }
-            .domain-badge { font-size: 1rem; padding: 0.4rem 1.2rem; right: -25px; top: -20px; }
-            .domain-tagline { font-size: 1.5rem; padding: 0.8rem 2rem; }
-            .tagline { font-size: 1.3rem; }
-            .answer-stats { flex-direction: column; align-items: center; }
-            .answer-grid { grid-template-columns: 1fr; }
-            .price-display { font-size: 4rem; }
-            .payment-breakdown { flex-direction: column; align-items: center; }
-            .button-group { flex-direction: column; align-items: center; }
-            .cta-button { width: 100%; max-width: 300px; margin: 0.5rem 0; }
-        }
-        
-        @media (max-width: 480px) {
-            .domain-main { font-size: 3.5rem; }
-            .concept-box, .future-box, .acquisition-box { padding: 1.8rem; }
-            h2 { font-size: 1.9rem; }
-            .price-display { font-size: 3rem; }
+            .container { padding: 4rem 1.5rem 3rem; }
+            .grid { grid-template-columns: 1fr; }
+            .cta { padding: 3rem 1.5rem; }
+            .price { font-size: 2.8rem; }
+            .btn { width: 100%; padding: 1.25rem 2rem; }
         }
     </style>
 </head>
 <body>
-    <!-- 量子网格背景 -->
-    <div class="quantum-grid"></div>
+
+    <div id="particles-js"></div>
     
-    <!-- 神经网络效果 -->
-    <div class="neural-network" id="neuralNetwork"></div>
-    
-    <header>
-        <div class="singularity-center"></div>
-        
-        <div class="domain-display">
-            <h1 class="domain-main">42.energy</h1>
-            <div class="domain-badge">2 CHARS</div>
-        </div>
-        
-        <div class="domain-tagline">THE ULTIMATE ANSWER TO ENERGY & CURRENCY</div>
-        <p class="tagline">"Energy is the true currency." - Elon Musk. 42 is the answer to life, the universe, and everything. Now, the answer to energy.</p>
-        
-        <div class="answer-stats">
-            <div class="answer-stat">
-                <div class="stat-number">42</div>
-                <div class="stat-label">Ultimate Answer</div>
-            </div>
-            <div class="answer-stat">
-                <div class="stat-number">2</div>
-                <div class="stat-label">Characters</div>
-            </div>
-            <div class="answer-stat">
-                <div class="stat-number">∞</div>
-                <div class="stat-label">Infinite Value</div>
-            </div>
-        </div>
-    </header>
+    <!-- SEO: Use <main> for the primary content of the page -->
+    <main class="container">
 
-    <main>
-        <section class="concept-box">
-            <h2><i class="fas fa-atom"></i> THE QUANTUM CONVERGENCE</h2>
-            
-            <div class="musk-quote">
-                <p>"Energy is the true currency. Bitcoin is based on energy. The competition for AI compute will ultimately be a competition for energy."</p>
-                <div class="quote-attribution">— Elon Musk</div>
-            </div>
-            
-            <h3><i class="fas fa-brain"></i> THE 42 PHENOMENON</h3>
-            <p>In Douglas Adams' "The Hitchhiker's Guide to the Galaxy," Deep Thought calculates that the answer to "life, the universe, and everything" is <strong>42</strong>. This has become the ultimate geek meme for profound truth.</p>
-            
-            <ul class="future-list">
-                <li><i class="fas fa-bolt"></i> <strong>Energy is Currency</strong> - The fundamental unit of value in a post-scarcity economy</li>
-                <li><i class="fas fa-server"></i> <strong>AI Compute = Energy</strong> - Artificial intelligence ultimately competes for joules</li>
-                <li><i class="fas fa-infinity"></i> <strong>The Ultimate Answer</strong> - 42 represents the convergence point of all computation</li>
-            </ul>
+        <header>
+            <!-- SEO: Use H1 for the most important heading -->
+            <h1 class="logo">
+                <span class="dynamic-42">42</span><span class="dynamic-energy">.energy</span>
+            </h1>
+            <p class="tagline">The Ultimate Answer to the Energy Question</p>
+        </header>
+        
+        <!-- SEO: Use <section> to group related content -->
+        <section class="thesis">
+            <p>"As AI approaches Exawatt-scale, its ultimate currency becomes energy. <span class="thesis-highlight">42.energy</span> isn't just a domain; it's the brand for the company that solves the final equation—the one that powers civilization's next leap."</p>
         </section>
 
-        <section class="future-box">
-            <h2><i class="fas fa-crystal-ball"></i> THE ENERGY FUTURE</h2>
-            <p>42.energy represents the nexus point of humanity's most critical technological trajectories:</p>
-            
-            <div class="answer-grid">
-                <div class="answer-card">
-                    <div class="card-icon"><i class="fas fa-solar-panel"></i></div>
-                    <div class="card-title">Renewable AI</div>
-                    <div class="card-desc">AI training centers powered by solar, wind, and fusion energy</div>
-                </div>
-                
-                <div class="answer-card">
-                    <div class="card-icon"><i class="fas fa-bitcoin"></i></div>
-                    <div class="card-title">Energy-Backed Currency</div>
-                    <div class="card-desc">Cryptocurrencies with verifiable energy expenditure as proof-of-work</div>
-                </div>
-                
-                <div class="answer-card">
-                    <div class="card-icon"><i class="fas fa-microchip"></i></div>
-                    <div class="card-title">Quantum Computing</div>
-                    <div class="card-desc">Next-gen processors solving energy optimization problems</div>
-                </div>
-                
-                <div class="answer-card">
-                    <div class="card-icon"><i class="fas fa-database"></i></div>
-                    <div class="card-title">Data Center Evolution</div>
-                    <div class="card-desc">Energy-efficient AI training facilities and compute farms</div>
-                </div>
-                
-                <div class="answer-card">
-                    <div class="card-icon"><i class="fas fa-chart-network"></i></div>
-                    <div class="card-title">Smart Grids</div>
-                    <div class="card-desc">AI-optimized energy distribution for maximum efficiency</div>
-                </div>
-                
-                <div class="answer-card">
-                    <div class="card-icon"><i class="fas fa-atom"></i></div>
-                    <div class="card-title">Fusion Energy</div>
-                    <div class="card-desc">The ultimate energy source for civilization-scale computation</div>
-                </div>
-                
-                <div class="answer-card">
-                    <div class="card-icon"><i class="fas fa-robot"></i></div>
-                    <div class="card-title">Autonomous Systems</div>
-                    <div class="card-desc">Self-optimizing energy consumption for robotic fleets</div>
-                </div>
-                
-                <div class="answer-card">
-                    <div class="card-icon"><i class="fas fa-vial"></i></div>
-                    <div class="card-title">Material Science</div>
-                    <div class="card-desc">AI-discovered superconductors and energy storage solutions</div>
-                </div>
+        <section class="grid">
+            <div class="card">
+                <h2 class="card-title">AGI Sustenance</h2>
+                <p class="card-desc">The ultimate answer to powering artificial general intelligence sustainably. For platforms designing energy-aware cognitive architectures.</p>
             </div>
-            
-            <h3><i class="fas fa-infinity"></i> THE SINGULARITY POINT</h3>
-            <p>As AI approaches human-level intelligence, energy becomes the limiting factor. 42.energy represents the domain where these fundamental questions are answered.</p>
+            <div class="card">
+                <h2 class="card-title">Exascale Computing</h2>
+                <p class="card-desc">The brand for data centers that measure power in gigawatts. Where the final question of computation is how to power it.</p>
+            </div>
+            <div class="card">
+                <h2 class="card-title">Next-Gen Nuclear</h2>
+                <p class="card-desc">The answer to limitless, dense energy. For ventures in fusion or advanced fission that represent the final frontier of power generation.</p>
+            </div>
+            <div class="card">
+                <h2 class="card-title">Decentralized Grids</h2>
+                <p class="card-desc">For AI-managed, resilient energy networks (DePIN). The ultimate answer to distributing power intelligently across the globe.</p>
+            </div>
+            <div class="card">
+                <h2 class="card-title">Planetary Energy Systems</h2>
+                <p class="card-desc">For moonshot projects on the scale of Dyson swarms. The answer isn't just on Earth; it's written in the stars.</p>
+            </div>
+            <div class="card">
+                <h2 class="card-title">Computational Thermodynamics</h2>
+                <p class="card-desc">Using AI to find the ultimate answer in energy efficiency, from chip design to global climate models.</p>
+            </div>
+            <div class="card">
+                <h2 class="card-title">Quantum Energy States</h2>
+                <p class="card-desc">The brand for harnessing energy at the subatomic level. Where the answer to everything lies in the quantum foam.</p>
+            </div>
+             <div class="card">
+                <h2 class="card-title">AI-Driven Material Science</h2>
+                <p class="card-desc">Discovering novel materials for energy generation and storage. The ultimate answer may not be a new source, but a new substance.</p>
+            </div>
+            <div class="card">
+                <h2 class="card-title">Resource Allocation AI</h2>
+                <p class="card-desc">For intelligent systems that optimize global energy consumption. The final question is not just how to make energy, but how to use it wisely.</p>
+            </div>
         </section>
 
-        <section class="acquisition-box">
-            <h2><i class="fas fa-gem"></i> ACQUIRE THE ANSWER</h2>
-            
-            <div class="ultimate-value">
-                <div class="price-display">$<span class="price-amount">7,420</span></div>
-                <div class="payment-plan">3 Payments of $2,473.33</div>
-                
-                <div class="payment-breakdown">
-                    <div class="payment-phase">
-                        <div class="phase-number">ANSWER 1</div>
-                        <div class="phase-amount">$2,473.33</div>
-                        <div style="font-size: 0.9rem; color: #8ac7ff; margin-top: 0.5rem;">Begin Access</div>
-                    </div>
-                    <div class="payment-phase">
-                        <div class="phase-number">ANSWER 2</div>
-                        <div class="phase-amount">$2,473.33</div>
-                        <div style="font-size: 0.9rem; color: #8ac7ff; margin-top: 0.5rem;">30 Days Later</div>
-                    </div>
-                    <div class="payment-phase">
-                        <div class="phase-number">ANSWER 3</div>
-                        <div class="phase-amount">$2,473.33</div>
-                        <div style="font-size: 0.9rem; color: #8ac7ff; margin-top: 0.5rem;">Full Ownership</div>
-                    </div>
+        <section class="cta">
+            <div class="cta-content">
+                <div style="font-size: 0.8rem; color: var(--accent-blue); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">Premium Domain Asset</div>
+                <div class="price">$4,200 USD</div>
+                <div class="price-sub">
+                    3-Month Financing Available
                 </div>
-                
-                <p><em>The ultimate answer to energy as currency • 2-character perfection • Singularity-ready domain</em></p>
-            </div>
-
-            <!-- Spaceship交易框 -->
-            <div class="spaceship-box">
-                <div class="spaceship-header">
-                    <i class="fas fa-rocket"></i>
-                    <div class="spaceship-title">Available on Spaceship.com</div>
-                </div>
-                
-                <p>Secure this foundational domain through the universe's most advanced domain platform. Quantum-secure escrow, instant transfer.</p>
-                
-                <div class="spaceship-link">
-                    <strong>Direct Answer Acquisition Link:</strong><br>
-                    <a href="https://www.spaceship.com/domains/42.energy" target="_blank">https://www.spaceship.com/domains/42.energy</a>
-                </div>
-                
-                <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> <strong>Philosophical inquiries:</strong> Contact for questions or ultimate offers: <a href="mailto:joshua369x@gmail.com">joshua369x@gmail.com</a></p>
-                </div>
-                
-                <div class="button-group">
-                    <a href="https://www.spaceship.com/domains/42.energy" class="cta-button" target="_blank">
-                        <i class="fas fa-rocket"></i> ACQUIRE THE ANSWER
+                <div class="btn-container">
+                    <!-- Updated purchase link opening in a new tab -->
+                    <a href="https://www.spaceship.com/s/buy/42.energy/LXDS34IrbPapmVxI" target="_blank" rel="noopener noreferrer" class="btn primary">
+                        Acquire Now
                     </a>
-                    
-                    <a href="mailto:joshua369x@gmail.com" class="cta-button">
-                        <i class="fas fa-comment-dots"></i> DEEP THOUGHT INQUIRY
-                    </a>
-                </div>
-                
-                <div class="trust-badges">
-                    <div class="badge"><i class="fas fa-award"></i> Ultimate Answer</div>
-                    <div class="badge"><i class="fas fa-bolt"></i> Energy Currency</div>
-                    <div class="badge"><i class="fas fa-lock"></i> Quantum Secure</div>
-                    <div class="badge"><i class="fas fa-infinity"></i> Infinite Value</div>
+                    <!-- Contact button with JS function -->
+                    <button class="btn secondary" onclick="copyEmail()">
+                        Contact
+                    </button>
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer>
-        <p>© 2026 42.energy | The answer to life, the universe, and everything — especially energy.</p>
-        <p class="footer-links">
-            <a href="#privacy">Quantum Privacy</a> |
-            <a href="#terms">Singularity Terms</a> |
-            <a href="mailto:joshua369x@gmail.com">Contact The Answer</a>
-        </p>
-        <p style="margin-top: 1rem; font-size: 0.8rem; color: #40a0ff; font-family: 'JetBrains Mono', monospace;">
-            00110100 00110010 00101110 01100101 01101110 01100101 01110010 01100111 01111001
-        </p>
+        <p>© 2026 42.energy - The Future is Measured in Joules.</p>
     </footer>
 
+    <!-- Particles.js library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
     <script>
-        // 生成神经网络效果
         document.addEventListener('DOMContentLoaded', function() {
-            const networkContainer = document.getElementById('neuralNetwork');
-            const neuronCount = 20;
-            const neurons = [];
+            const isMobile = window.innerWidth < 768;
             
-            // 创建神经元
-            for (let i = 0; i < neuronCount; i++) {
-                const neuron = document.createElement('div');
-                neuron.className = 'neuron';
-                
-                const left = Math.random() * 95 + 2.5;
-                const top = Math.random() * 95 + 2.5;
-                const delay = Math.random() * 3;
-                const duration = 2 + Math.random() * 2;
-                const size = 4 + Math.random() * 4;
-                
-                neuron.style.cssText = `
-                    left: ${left}%;
-                    top: ${top}%;
-                    width: ${size}px;
-                    height: ${size}px;
-                    animation: neuronPulse ${duration}s ease-in-out infinite;
-                    animation-delay: ${delay}s;
-                    background: ${i % 3 === 0 ? 'var(--quantum-blue)' : i % 3 === 1 ? 'var(--matrix-green)' : 'var(--energy-gold)'};
-                    box-shadow: 0 0 ${size * 2}px ${i % 3 === 0 ? 'var(--quantum-blue)' : i % 3 === 1 ? 'var(--matrix-green)' : 'var(--energy-gold)'};
-                `;
-                
-                networkContainer.appendChild(neuron);
-                neurons.push({element: neuron, x: left, y: top});
-            }
-            
-            // 创建轴突连接
-            neurons.forEach((neuron, index) => {
-                // 每个神经元连接3-5个其他神经元
-                const connections = Math.floor(Math.random() * 3) + 3;
-                const connectedIndices = new Set();
-                
-                for (let i = 0; i < connections; i++) {
-                    let targetIndex;
-                    do {
-                        targetIndex = Math.floor(Math.random() * neuronCount);
-                    } while (targetIndex === index || connectedIndices.has(targetIndex));
-                    
-                    connectedIndices.add(targetIndex);
-                    
-                    const targetNeuron = neurons[targetIndex];
-                    const axon = document.createElement('div');
-                    axon.className = 'axon';
-                    
-                    // 计算轴突长度和角度
-                    const dx = targetNeuron.x - neuron.x;
-                    const dy = targetNeuron.y - neuron.y;
-                    const length = Math.sqrt(dx * dx + dy * dy) * 0.85;
-                    const angle = Math.atan2(dy, dx) * (180 / Math.PI);
-                    
-                    const color = Math.random() > 0.5 ? 'var(--quantum-blue)' : 'var(--matrix-green)';
-                    
-                    axon.style.cssText = `
-                        left: ${neuron.x}%;
-                        top: ${neuron.y}%;
-                        width: ${length}%;
-                        transform: rotate(${angle}deg);
-                        background: linear-gradient(90deg, transparent, ${color}, transparent);
-                        opacity: ${0.05 + Math.random() * 0.1};
-                    `;
-                    
-                    networkContainer.appendChild(axon);
-                }
-            });
-            
-            // 添加量子纠缠效果
-            const entanglement = document.createElement('div');
-            entanglement.style.cssText = `
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(45deg, transparent 40%, rgba(0, 212, 255, 0.05) 50%, transparent 60%);
-                animation: quantumEntanglement 20s linear infinite;
-                z-index: -1;
-            `;
-            networkContainer.appendChild(entanglement);
-            
-            // 二进制代码装饰
-            const boxes = document.querySelectorAll('.concept-box, .future-box');
-            boxes.forEach(box => {
-                for (let i = 0; i < 3; i++) {
-                    const binary = document.createElement('div');
-                    binary.style.cssText = `
-                        position: absolute;
-                        font-family: 'JetBrains Mono', monospace;
-                        font-size: 0.8rem;
-                        color: rgba(0, 212, 255, 0.1);
-                        z-index: -1;
-                    `;
-                    
-                    let code = '';
-                    for (let j = 0; j < 20; j++) {
-                        code += Math.round(Math.random());
+            particlesJS('particles-js', {
+                particles: {
+                    // SEO: Reduced particles on mobile for better performance
+                    number: { value: isMobile ? 40 : 100, density: { enable: true, value_area: 800 } },
+                    color: { value: ['#00e0ff', '#ae5aff'] },
+                    shape: { type: 'circle' },
+                    opacity: { value: 0.4, random: true },
+                    size: { value: 2, random: true },
+                    line_linked: {
+                        enable: true,
+                        distance: 120,
+                        color: '#8899a9',
+                        opacity: 0.1,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: isMobile ? 1 : 2,
+                        direction: 'none',
+                        random: true,
+                        straight: false,
+                        out_mode: 'out',
+                        bounce: false
                     }
-                    
-                    binary.textContent = code;
-                    
-                    const top = Math.random() * 80 + 10;
-                    const left = Math.random() * 80 + 10;
-                    
-                    binary.style.top = `${top}%`;
-                    binary.style.left = `${left}%`;
-                    
-                    box.appendChild(binary);
-                }
+                },
+                interactivity: {
+                    detect_on: 'canvas',
+                    events: {
+                        onhover: { enable: !isMobile, mode: 'bubble' },
+                        onclick: { enable: false },
+                        resize: true
+                    },
+                    modes: {
+                        bubble: {
+                            distance: 200,
+                            size: 3,
+                            duration: 2,
+                            opacity: 0.8
+                        }
+                    }
+                },
+                retina_detect: true
             });
         });
+
+        function copyEmail() {
+            navigator.clipboard.writeText('joshua369x@gmail.com').then(function() {
+                const contactBtn = document.querySelector('.btn.secondary');
+                const originalText = contactBtn.textContent;
+                contactBtn.textContent = 'Email Copied!';
+                contactBtn.style.color = 'var(--accent-purple)';
+                contactBtn.style.borderColor = 'var(--accent-purple)';
+                
+                setTimeout(function() {
+                    contactBtn.textContent = originalText;
+                    contactBtn.style.color = '';
+                    contactBtn.style.borderColor = '';
+                }, 2500);
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
     </script>
+
 </body>
 </html>
