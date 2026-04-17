@@ -11,7 +11,7 @@
     <meta name="description" content="42.energy: The premium domain representing the ultimate answer to AI's energy challenges. Energy is the master resource—whoever solves sustainable, abundant power commands the future.">
     
     <!-- SEO: Keywords -->
-    <meta name="keywords" content="42, energy, AI, Elon Musk, Exawatts, master resource, AGI, domain, ultimate answer, exascale, sci-fi, premium domain, 42.energy">
+    <meta name="keywords" content="42, energy, AI, Elon Musk, Exawatts, master resource, AGI, domain, ultimate answer, exascale, sci-fi, premium domain, 42.energy, Hitchhiker's Guide">
 
     <!-- Social Media/Open Graph Tags -->
     <meta property="og:title" content="42.energy | The Ultimate Answer to Energy">
@@ -56,8 +56,14 @@
             --accent-blue: #00e0ff;
             --accent-purple: #ae5aff;
             --accent-hot: #ff4d00;
+            --fusion-core: #fff9e6;
+            --fusion-orange: #ff6b35;
+            --fusion-yellow: #ffd93d;
+            --fusion-white: #ffffff;
             --border-color: rgba(255, 255, 255, 0.08);
             --card-bg: rgba(255, 255, 255, 0.03);
+            --egg-text: rgba(255, 255, 255, 0.15);
+            --egg-hover: rgba(255, 249, 230, 0.9);
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
@@ -79,9 +85,95 @@
             z-index: -1;
         }
 
+        /* === FUSION CORE ANIMATION FOR "42" === */
+        @keyframes fusionPulse {
+            0%, 100% { 
+                text-shadow: 
+                    0 0 10px var(--fusion-orange),
+                    0 0 20px var(--fusion-orange),
+                    0 0 40px var(--fusion-yellow),
+                    0 0 60px var(--fusion-yellow),
+                    0 0 80px var(--fusion-core),
+                    0 0 100px var(--fusion-core);
+                filter: blur(0);
+                transform: scale(1);
+            }
+            25% { 
+                text-shadow: 
+                    0 0 15px var(--fusion-orange),
+                    0 0 30px var(--fusion-yellow),
+                    0 0 50px var(--fusion-white),
+                    0 0 70px var(--fusion-core),
+                    0 0 90px var(--fusion-core),
+                    0 0 120px rgba(255,255,255,0.8);
+                filter: blur(0.3px);
+                transform: scale(1.02);
+            }
+            50% { 
+                text-shadow: 
+                    0 0 20px var(--fusion-yellow),
+                    0 0 40px var(--fusion-white),
+                    0 0 60px var(--fusion-core),
+                    0 0 80px var(--fusion-core),
+                    0 0 100px rgba(255,255,255,0.9),
+                    0 0 140px rgba(255,249,230,0.7);
+                filter: blur(0.5px);
+                transform: scale(1.04);
+            }
+            75% { 
+                text-shadow: 
+                    0 0 15px var(--fusion-orange),
+                    0 0 30px var(--fusion-yellow),
+                    0 0 50px var(--fusion-white),
+                    0 0 70px var(--fusion-core),
+                    0 0 90px var(--fusion-core),
+                    0 0 120px rgba(255,255,255,0.8);
+                filter: blur(0.3px);
+                transform: scale(1.02);
+            }
+        }
+
+        @keyframes fusionFlicker {
+            0%, 100% { opacity: 1; }
+            3% { opacity: 0.95; }
+            6% { opacity: 1; }
+            9% { opacity: 0.98; }
+            12% { opacity: 1; }
+            45% { opacity: 0.97; }
+            48% { opacity: 1; }
+            51% { opacity: 0.99; }
+            54% { opacity: 1; }
+        }
+
+        @keyframes fusionFlare {
+            0%, 100% { 
+                box-shadow: 
+                    0 0 20px rgba(255,107,53,0.3),
+                    0 0 40px rgba(255,217,61,0.2),
+                    inset 0 0 30px rgba(255,249,230,0.1);
+            }
+            50% { 
+                box-shadow: 
+                    0 0 35px rgba(255,107,53,0.6),
+                    0 0 60px rgba(255,217,61,0.4),
+                    inset 0 0 50px rgba(255,249,230,0.25);
+            }
+        }
+
         @keyframes glow {
           0%, 100% { text-shadow: 0 0 5px var(--accent-blue), 0 0 10px var(--accent-blue), 0 0 20px var(--accent-purple), 0 0 30px var(--accent-purple); opacity: 0.9; }
           50% { text-shadow: 0 0 10px var(--accent-blue), 0 0 20px var(--accent-blue), 0 0 30px var(--accent-purple), 0 0 40px var(--accent-purple); opacity: 1; }
+        }
+
+        /* === EASTER EGG ANIMATION === */
+        @keyframes eggReveal {
+            0% { opacity: 0.15; transform: translateY(0); }
+            100% { opacity: 0.9; transform: translateY(-2px); }
+        }
+        
+        @keyframes eggGlow {
+            0%, 100% { text-shadow: 0 0 5px rgba(255,249,230,0.3); }
+            50% { text-shadow: 0 0 15px rgba(255,249,230,0.7), 0 0 25px rgba(255,217,61,0.4); }
         }
 
         .container { max-width: 1400px; margin: 0 auto; padding: 6rem 2rem 4rem; position: relative; z-index: 2; }
@@ -93,17 +185,78 @@
             line-height: 1.1;
             margin-bottom: 1.5rem;
             letter-spacing: -0.05em;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.1em;
         }
-        .dynamic-42, .dynamic-energy { display: inline-block; }
+        
+        .dynamic-42, .dynamic-energy { display: inline-block; position: relative; }
+        
+        /* === FUSION CORE STYLE FOR "42" === */
         .dynamic-42 {
-            background: linear-gradient(135deg, var(--text-primary), #d0eaff);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-            animation: glow 4s ease-in-out infinite;
+            background: linear-gradient(135deg, 
+                var(--fusion-core) 0%, 
+                var(--fusion-yellow) 25%, 
+                var(--fusion-orange) 50%, 
+                var(--fusion-yellow) 75%, 
+                var(--fusion-core) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% 200%;
+            animation: 
+                fusionPulse 2.5s ease-in-out infinite,
+                fusionFlicker 4s linear infinite,
+                gradientShift 6s ease infinite;
+            position: relative;
+            filter: drop-shadow(0 0 10px rgba(255,217,61,0.5));
         }
+        
+        .dynamic-42::before {
+            content: '42';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: radial-gradient(ellipse at center, 
+                rgba(255,249,230,0.9) 0%, 
+                rgba(255,217,61,0.4) 30%, 
+                transparent 70%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fusionFlare 2.5s ease-in-out infinite;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .dynamic-42::after {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120%; height: 120%;
+            background: radial-gradient(circle, 
+                rgba(255,249,230,0.3) 0%, 
+                rgba(255,107,53,0.1) 40%, 
+                transparent 70%);
+            border-radius: 50%;
+            animation: fusionPulse 2.5s ease-in-out infinite;
+            pointer-events: none;
+            z-index: -2;
+            filter: blur(8px);
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* === CYBER QUANTUM STYLE FOR ".energy" === */
         .dynamic-energy {
             background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
             -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
             animation: glow 3s ease-in-out infinite reverse;
+            margin-left: 0.05em;
         }
 
         .tagline { font-size: clamp(1.1rem, 2.5vw, 1.5rem); color: var(--text-secondary); font-weight: 300; margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto; }
@@ -199,12 +352,67 @@
         
         footer { text-align: center; padding: 2rem; color: #555; font-size: 0.8rem; border-top: 1px solid rgba(255, 255, 255, 0.05); }
         
+        /* === EASTER EGG SECTION === */
+        .easter-egg {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px dashed rgba(255, 255, 255, 0.05);
+            text-align: center;
+            cursor: default;
+            user-select: none;
+        }
+        .egg-trigger {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--egg-text);
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+        .egg-trigger:hover {
+            color: var(--egg-hover);
+            animation: eggGlow 1.5s ease-in-out infinite;
+        }
+        .egg-content {
+            max-width: 600px;
+            margin: 1rem auto 0;
+            padding: 1rem;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--egg-text);
+            line-height: 1.8;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.5s ease;
+            pointer-events: none;
+        }
+        .egg-content.revealed {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+            animation: eggReveal 0.6s ease-out forwards;
+        }
+        .egg-content strong {
+            color: var(--fusion-yellow);
+            font-weight: 700;
+        }
+        .egg-content .source {
+            display: block;
+            margin-top: 0.75rem;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.3);
+            font-style: italic;
+        }
+        
         @media (max-width: 768px) {
             .container { padding: 4rem 1.5rem 3rem; }
             .grid, .quotes-section, .master-resource-section { grid-template-columns: 1fr; }
             .cta { padding: 3rem 1.5rem; }
             .price { font-size: 2.8rem; }
             .btn { width: 100%; padding: 1.25rem 2rem; }
+            .logo { font-size: clamp(2.5rem, 9vw, 5rem); }
         }
     </style>
 </head>
@@ -225,7 +433,7 @@
             <p>"As AI approaches Exawatt-scale, its ultimate currency becomes energy. <span class="thesis-highlight">42.energy</span> isn't just a domain; it's the brand for the company that solves the final equation—the one that powers civilization's next leap."</p>
         </section>
 
-        <!-- NEW: Master Resource Highlight Section -->
+        <!-- Master Resource Highlight Section -->
         <section class="master-resource-section">
             <div class="master-resource-title">► Core Thesis</div>
             <p class="master-resource-quote">
@@ -276,6 +484,16 @@
 
     <footer>
         <p>© 2026 42.energy — The Future is Measured in Joules.</p>
+        
+        <!-- === EASTER EGG: The Hitchhiker's Reference === -->
+        <div class="easter-egg">
+            <div class="egg-trigger" id="eggTrigger">✦ hover to reveal ✦</div>
+            <div class="egg-content" id="eggContent">
+                <strong>42</strong> — The Answer to the Ultimate Question of Life, the Universe, and Everything.<br>
+                <span style="color: var(--text-secondary);">But first, you need the energy to compute it.</span>
+                <span class="source">— Inspired by Douglas Adams, The Hitchhiker's Guide to the Galaxy</span>
+            </div>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -320,6 +538,28 @@
                     }
                 },
                 retina_detect: true
+            });
+
+            // === EASTER EGG INTERACTION ===
+            const eggTrigger = document.getElementById('eggTrigger');
+            const eggContent = document.getElementById('eggContent');
+            let eggRevealed = false;
+
+            eggTrigger.addEventListener('mouseenter', function() {
+                if (!eggRevealed) {
+                    eggContent.classList.add('revealed');
+                    eggRevealed = true;
+                }
+            });
+
+            // Mobile tap support
+            eggTrigger.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (!eggRevealed) {
+                    eggContent.classList.add('revealed');
+                    eggRevealed = true;
+                    eggTrigger.textContent = '✦ revealed ✦';
+                }
             });
         });
 
